@@ -20,7 +20,7 @@ RECIPIENT_EMAIL = "samemerald8@gmail.com"
 
 
 exa = Exa(api_key=EXA_API_KEY)
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = OpenAI(api_key=OPENAI_API_KEY, max_retries=3)
 resend.api_key = RESEND_API_KEY
 
 def fetch_tech_intelligence():
