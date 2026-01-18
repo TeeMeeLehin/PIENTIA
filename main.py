@@ -90,6 +90,13 @@ def compile_newsletter(raw_data):
     - Use Markdown headers.
     - Every claim MUST have a [Source Link] immediately following it.
     - Keep total length under 800 words for maximum scannability.
+    
+    ### LINKING RULES (CRITICAL):
+    1. Every piece of news MUST be linked to its source.
+    2. Format links as INLINE Markdown: [Source Name](URL). 
+    3. Example: "Paga announced a new funding round ([TechCabal] hyperlinked to (https://techcabal.com/paga-funding))."
+    4. Do NOT use reference-style links at the bottom (e.g., [1]: URL).
+    5. If a URL is provided in the raw data, you MUST embed it. Never output just the name in brackets like [TechCabal] without hyperlinking the URL.
     """
 
     user_prompt = f"Synthesize the following raw intelligence into the newsletter format:\n\n{raw_data}"
